@@ -27,10 +27,12 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   txt: {
-    fontSize: 30,
+    fontSize: 28,
+    padding: 10,
     marginBottom: 10,
     color: "#954e80",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    textAlign: "center"
   },
   btn: {
     backgroundColor: "#8c52dc",
@@ -42,7 +44,8 @@ const styles = StyleSheet.create({
     position: "relative",
     width: "auto",
     alignSelf: "center",
-    borderRadius: 26
+    borderRadius: 6,
+    letterSpacing: 1
   },
   btntxt: {
     color: "#fff"
