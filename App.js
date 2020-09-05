@@ -3,14 +3,18 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
-  const [outputText, setOutputText] = useState("Hello, Friends Chai Peelo");
+  const [outputText, setOutputText] = useState(true);
+  const toggleFunction = () => {
+    setOutputText(!outputText);
+  };
   return (
     <View style={styles.container}>
-      <Text style={styles.txt}>{outputText}</Text>
-      <TouchableOpacity
-        style={styles.btn}
-        onPress={() => setOutputText("Nikal, pehli phursat me nikal")}
-      >
+      <Text style={styles.txt}>
+        {outputText
+          ? "Hello, friends Chai Peelo"
+          : "Nikal, pehli phursat me nikal"}
+      </Text>
+      <TouchableOpacity style={styles.btn} onPress={() => toggleFunction()}>
         <Text style={styles.btntxt}>Click Here</Text>
       </TouchableOpacity>
     </View>
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
     // flexWrap: "Wrap",
     backgroundColor: "#ffefd5",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   txt: {
     fontSize: 28,
@@ -32,7 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: "#954e80",
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
   },
   btn: {
     backgroundColor: "#8c52dc",
@@ -45,9 +49,9 @@ const styles = StyleSheet.create({
     width: "auto",
     alignSelf: "center",
     borderRadius: 6,
-    letterSpacing: 1
+    letterSpacing: 1,
   },
   btntxt: {
-    color: "#fff"
-  }
+    color: "#fff",
+  },
 });
